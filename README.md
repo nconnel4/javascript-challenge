@@ -1,5 +1,6 @@
 # Javascript and Dom Manipultation
 Nathan Connell
+
 06/22/2021
 
 ## Background
