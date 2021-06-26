@@ -26,10 +26,10 @@ function filterData() {
 
     // get date filter value
     var date = d3.select("#datetime").property("value");
-    var country = d3.select("#country").property("value");
-    var city = d3.select("#city").property("value");
-    var state = d3.select("#state").property("value");
-    var shape = d3.select("#shape").property("value");
+    var country = d3.select("#country").property("value").toLowerCase();
+    var city = d3.select("#city").property("value").toLowerCase();
+    var state = d3.select("#state").property("value").toLowerCase();
+    var shape = d3.select("#shape").property("value").toLowerCase();
 
     // initialize filteredData
     var filteredData = tableData;
