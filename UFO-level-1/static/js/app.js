@@ -21,5 +21,26 @@ function buildTable(data) {
     })
 }
 
+// filter data based on date
+function filterData() {
+
+    // get date filter value
+    var date = d3.select("#datetime").property("value");
+
+    // initialize filteredData
+    var filteredData = tableData;
+
+    // check that date field is valid
+    if (date) {
+        // if the date is a non-null / non-empty value, apply the filter
+        filteredData = filteredData.filter(row => row.datetime == date);
+    }
+
+    // rebuild table
+    buildTable(filteredData);
+}
+
+// filter listener event
+
 
 buildTable(tableData);
