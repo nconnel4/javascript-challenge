@@ -41,6 +41,7 @@ function filterData() {
 }
 
 // filter listener event
+d3.selectAll("#filter-btn").on("click", filterData);
 
-
+// initiate table build
 buildTable(tableData);
