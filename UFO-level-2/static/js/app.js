@@ -26,6 +26,10 @@ function filterData() {
 
     // get date filter value
     var date = d3.select("#datetime").property("value");
+    var country = d3.select("#country").property("value");
+    var city = d3.select("#city").property("value");
+    var state = d3.select("#state").property("value");
+    var shape = d3.select("#shape").property("value");
 
     // initialize filteredData
     var filteredData = tableData;
@@ -35,6 +39,27 @@ function filterData() {
         // if the date is a non-null / non-empty value, apply the filter
         filteredData = filteredData.filter(row => row.datetime == date);
     }
+    // filter for country
+    if (country) {
+        // if the country is a non-null / non-empty value, apply the filter
+        filteredData = filteredData.filter(row => row.country == country);
+    }
+    // filter for state
+    if (state) {
+        // if the state is a non-null / non-empty value, apply the filter
+        filteredData = filteredData.filter(row => row.state == state);
+    }
+    // filter for city
+    if (city) {
+        // if the city is a non-null / non-empty value, apply the filter
+        filteredData = filteredData.filter(row => row.city == city);
+    }
+    // filter for shape
+    if (shape) {
+        // if the shape is a non-null / non-empty value, apply the filter
+        filteredData = filteredData.filter(row => row.shape == shape);
+    }
+
 
     // rebuild table
     buildTable(filteredData);
