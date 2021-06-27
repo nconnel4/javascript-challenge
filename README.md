@@ -1,4 +1,4 @@
-# Javascript and Dom Manipultation
+# Javascript and Dom Manipulation
 Nathan Connell
 
 06/22/2021
